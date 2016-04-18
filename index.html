@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Quiz</title>
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<div id=tree>
+			<form name="seed">
+				<h1>Please enter a height</h1>
+				<input type="text" name="height" value="4">
+				<h1>Please enter a single character you would like to use to make your tree</h1>
+				<input type="text" name="character" value="#">
+				<input type="button" value="Grow Your Tree" onclick="treePlanter(document.seed.height.value, document.seed.character.value)">
+			</form>
+		</div>
+		<script src="quiz.js" type="text/javascript" charset="utf-8" async defer></script>
+	</body>
+</html>
