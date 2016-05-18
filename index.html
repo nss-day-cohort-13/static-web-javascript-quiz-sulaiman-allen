@@ -8,13 +8,11 @@
 	</head>
 	<body>
 		<div id=tree>
-			<form name="seed">
-				<h1>Please enter a height</h1>
-				<input type="text" name="height" value="4">
-				<h1>Please enter a single character you would like to use to make your tree</h1>
-				<input type="text" name="character" value="#">
-				<input type="button" value="Grow Your Tree" onclick="inputGetter(document.seed.height.value, document.seed.character.value)">
-			</form>
+			<h1>Please enter a height</h1>
+			<input type="text" name="height" value="4" id="height">
+			<h1>Please enter a single character you would like to use to make your tree</h1>
+			<input type="text" name="character" value="#" id="character">
+			<input type="submit" value="Grow Your Tree" id="submit" autofocus>
 		</div>
 		<script src="quiz.js" type="text/javascript" charset="utf-8" async defer></script>
 	</body>

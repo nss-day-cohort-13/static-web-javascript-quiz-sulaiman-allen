@@ -1,16 +1,16 @@
 function inputGetter(height, character) {
 
-	if (height === '' || parseInt(height) === NaN) { // Nan apperently doesn't work to test against
+
+	if (height === '' || parseInt(height) === isNaN) {
 		alert("Please enter a height as an integer");
 	}
 	if (character === '' || character.length > 1) {
-		alert("Please enter 1 and only one chatacter")
+		alert("Please enter 1 and only one chatacter");
 	}
 
-	seed = {"height": height ,"character": character};
+	var seed = {"height": height ,"character": character};
 
-	return treePlanter(seed)
-
+	return treePlanter(seed);
 }
 
 function treePlanter(seed) {
@@ -36,3 +36,17 @@ function treePlanter(seed) {
 		console.log(rowString);
 	}
 }
+
+document.addEventListener("click", function () {
+	if(event.target.id === "submit") {
+		inputGetter(document.getElementById("height").value, document.getElementById("character").value);
+	}
+});
+
+document.addEventListener("keyup", function(e) {
+	// if enter key is pressed
+	if(e && e.keyCode === 13)
+	  {
+	     document.getElementById("submit").click();
+	  }
+});
