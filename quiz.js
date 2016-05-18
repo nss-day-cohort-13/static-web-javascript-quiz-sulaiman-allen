@@ -8,7 +8,7 @@ function inputGetter(height, character) {
 		alert("Please enter 1 and only one chatacter");
 	}
 
-	seed = {"height": height ,"character": character};
+	var seed = {"height": height ,"character": character};
 
 	return treePlanter(seed);
 }
@@ -38,5 +38,15 @@ function treePlanter(seed) {
 }
 
 document.addEventListener("click", function () {
-	inputGetter(document.seed.height.value, document.seed.character.value);
+	if(event.target.id === "submit") {
+		inputGetter(document.getElementById("height").value, document.getElementById("character").value);
+	}
+});
+
+document.addEventListener("keyup", function(e) {
+	// if enter key is pressed
+	if(e && e.keyCode === 13)
+	  {
+	     document.getElementById("submit").click();
+	  }
 });
